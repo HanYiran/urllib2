@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 
 import urllib2
+
 def load_baidu():
 
     url = 'http://www.baidu.com'
@@ -18,6 +19,10 @@ def load_baidu():
 
     user_agent = request.get_header('User-agent')
     print user_agent
+
+    #打印状态码
+    code = response.getcode()
+    print code
 
 if __name__ == '__main__':
     load_baidu()
