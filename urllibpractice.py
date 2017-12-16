@@ -2,10 +2,19 @@
 
 import urllib2
 
-url = 'http://www.baidu.com'
+def load_baidu():
 
-response = urllib2.urlopen(url)
+    url = 'http://www.baidu.com'
 
-html = response.read()
+    response = urllib2.urlopen(url)
 
-print html
+    html = response.read()
+
+    return html
+def write_file(html):
+    with open('baidu01.html','w') as f :
+        f.write(html)
+
+if __name__ == '__main__':
+    data = load_baidu()
+    write_file(data)
