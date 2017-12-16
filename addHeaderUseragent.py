@@ -24,5 +24,8 @@ def load_baidu():
     code = response.getcode()
     print code
 
+    #打印真实url
+    real_url = response.geturl()
+    print real_url
 if __name__ == '__main__':
     load_baidu()
