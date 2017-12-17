@@ -12,7 +12,7 @@ class Tieba(object):
         self.start_page = start_page
         self.end_page = end_page
         self.base_url = 'https://tieba.baidu.com/f?'
-        self.header = {'User-Agent': "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3"}
+        self.header = {"User-Agent" : "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"}
 
     def send_request(self,url):
         time.sleep(2)
@@ -28,7 +28,7 @@ class Tieba(object):
 
     def write_file(self,page,data):
 
-        filename = 'tieba/'+str(page)+ u'页.html'
+        filename = 'tieba/' +str(page)+ 'page.html'
 
         # 转换为Unicode后 不能用%s 转义  s是指string
         # print '%s正在下载.....'%filename
