@@ -28,9 +28,10 @@ class Tieba(object):
 
     def write_file(self,page,data):
 
-        filename = 'tieba/'+self.tieba_name+str(page)+ '页.html'
-        print type(filename)
-        print '%s正在下载.....'%filename
+        filename = 'tieba/'+str(page)+ u'页.html'
+
+        # 转换为Unicode后 不能用%s 转义  s是指string
+        # print '%s正在下载.....'%filename
         with open(filename,'w') as f :
             f.write(data)
 
